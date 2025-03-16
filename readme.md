@@ -39,3 +39,4 @@ Ini adalah proyek latihan Express.js dengan Sequelize sebagai ORM dan PostgreSQL
 4. **Mendapatkan semua books by author** : GET http://localhost:3000/books/author/id
 5. **update book by id** : PUT http://localhost:3000/books/id
 7. **delete book by id** : DELETE http://localhost:3000/books/id
+8. **create book baru** : POST http://localhost:3000/books
