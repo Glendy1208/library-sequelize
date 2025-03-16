@@ -1,0 +1,9 @@
+# Database configuration
+DB_NAME=nama_database
+DB_USER=nama_user
+DB_PASSWORD=password
+DB_HOST=host
+DB_PORT=db_port
+
+# Server configuration
+PORT=3000

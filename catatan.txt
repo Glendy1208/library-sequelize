@@ -1,0 +1,33 @@
+dependensi
+1. npm i nodemon : hot reload
+2. npm i body-parser : read the body content
+2. npm i mysql : mysql database
+
+
+INSTALASI DEPENDENSI
+npm install express sequelize pg pg-hstore nodemon body-parser
+npm install --save-dev sequelize-cli
+npm install dotenv
+
+INISIALIASI
+npx sequelize-cli init
+
+CREATE DATABASE
+atur dulu di config > config.json, kemudian jalankan:
+npx sequelize-cli db:create
+
+CREATE TABLE
+npx sequelize-cli model:generate --name Author --attributes name:string,bio:text,birth_date:date
+
+RELASI
+Author.hasMany(models.Book, { foreignKey: 'author_id' })
+Book.belongsTo(models.Author, { foreignKey: 'author_id' })
+
+MIGRASI
+npx sequelize-cli db:migrate
+npx sequelize-cli db:migrate:undo:all
+
+SEEDER
+npx sequelize-cli seed:generate --name demo-authors
+npx sequelize-cli db:seed:all
+
